@@ -1,29 +1,36 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
-  </Layout>
-)
-
-export default IndexPage
+export default function SendGridUI() {
+  return (
+    <form action="/api/sendgrid" method="POST">
+      <h2 style={{ marginBottom: `16px` }}>Send email via SendGrid</h2>
+      <div style={{ marginBottom: `8px` }}>
+        <label
+          style={{ display: `block`, marginBottom: `4px` }}
+          htmlFor="email"
+        >
+          To:
+        </label>
+        <input name="email" id="email" type="email" />
+      </div>
+      <div style={{ marginBottom: `8px` }}>
+        <label
+          style={{ display: `block`, marginBottom: `4px` }}
+          htmlFor="subject"
+        >
+          Subject:
+        </label>
+        <input name="subject" id="subject" />
+      </div>
+      <div style={{ marginBottom: `24px` }}>
+        <label style={{ display: `block`, marginBottom: `4px` }} htmlFor="text">
+          Message:
+        </label>
+        <textarea name="text" id="text" />
+      </div>
+      <div>
+        <button>Send email</button>
+      </div>
+    </form>
+  )
+}
