@@ -5,14 +5,22 @@
   "version": "0.1.0",
   "author": "Koki Shibata <contact@kokishibata.com>",
   "dependencies": {
-  "@sendgrid/mail": "^7.4.2",
-  "gatsby": "next",
-  "gatsby-plugin-gatsby-cloud": "next",
-  "react": "^17.0.1",
-  "react-dom": "^17.0.1"
+    "@sendgrid/mail": "^7.4.2",
+    "gatsby": "next",
+    "gatsby-plugin-gatsby-cloud": "next",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "prettier": "2.3.2"
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.3.2"
   },
   "keywords": [
     "gatsby"
